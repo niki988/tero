@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Refeições preparadas em Aveiro e Ílhavo | TERO</title>
+  <meta name="description" content="Conheça a proposta TERO: refeições preparadas, opções individuais e caixas para entrega planeada em Aveiro e Ílhavo." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
+
+  <header class="site-header" id="topo">
+    <div class="container header-grid">
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="header-center">
+        <a class="btn btn-primary" href="encomendar.html">Encomendar</a>
+      </div>
+
+      <div class="header-right" id="authControls" aria-live="polite">
+        <button class="text-link" id="loginBtn" type="button">Login</button>
+        <button class="btn btn-outline" id="registerBtn" type="button">Registar</button>
+      </div>
+    </div>
+
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Navegação móvel">
+      <ul>
+        <li><a href="perfil.html">Perfil</a></li>
+        <li><a href="encomendar.html">Encomendar</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="#contactos" data-target="contactos">Contacte-nos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero section" id="encomendar">
+      <div class="container hero-grid">
+        <figure class="hero-media" aria-label="Imagem ilustrativa de refeições preparadas">
+          <div class="media-placeholder" role="img" aria-label="Imagem provisória; fotografia dos pratos a definir">
+            <span>Imagem provisória</span>
+          </div>
+        </figure>
+
+        <div class="hero-content">
+          <p class="logo-label">TERO</p>
+          <h1>As refeições da semana, mais simples de organizar.</h1>
+          <p>Refeições preparadas para o dia a dia, com entrega planeada em Aveiro e Ílhavo.</p>
+          <a class="btn btn-primary btn-large" href="catalogo.html">Conhecer o menu</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section stats" id="catalogo">
+      <div class="container stats-grid">
+        <article class="info-card">
+          <h2>Área de entrega</h2>
+          <p class="big-number">Aveiro e Ílhavo</p>
+        </article>
+
+        <article class="info-card">
+          <h2>Formatos</h2>
+          <p class="big-number">Refeições e caixas</p>
+        </article>
+
+        <article class="info-card">
+          <h2>Entrega</h2>
+          <p class="location-row">
+            <svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
+              <path d="M12 2.5C8.27 2.5 5.25 5.52 5.25 9.25c0 4.87 6.75 12.25 6.75 12.25s6.75-7.38 6.75-12.25C18.75 5.52 15.73 2.5 12 2.5Zm0 9.5a2.75 2.75 0 1 1 0-5.5 2.75 2.75 0 0 1 0 5.5Z" />
+            </svg>
+            Data pretendida, sujeita a confirmação
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section how-it-works" id="como-funciona">
+      <div class="container">
+        <h2 class="section-title">Como funciona</h2>
+        <div class="steps-grid">
+          <article class="info-card">
+            <h3>1. Escolha</h3>
+            <p>Selecione refeições individuais ou uma caixa com várias unidades.</p>
+          </article>
+          <article class="info-card">
+            <h3>2. Indique a data</h3>
+            <p>Escolha uma data pretendida; o calendário de disponibilidade ainda está por configurar.</p>
+          </article>
+          <article class="info-card">
+            <h3>3. Receba</h3>
+            <p>A área inicialmente prevista para entregas é Aveiro e Ílhavo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about">
+      <div class="container about-card">
+        <h2>A proposta TERO</h2>
+        <p>Uma oferta própria e limitada de refeições preparadas, com menu renovado periodicamente e pensado para simplificar o quotidiano.</p>
+        <p class="promo-text">O cliente poderá escolher refeições avulsas ou caixas com várias unidades.</p>
+        <p class="contact-phone">Menu, receitas, preços finais e condições de entrega serão confirmados antes do lançamento.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="contactos">
+    <div class="container footer-grid">
+      <section>
+        <h3>Descobrir</h3>
+        <ul>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="catalogo.html">Menu de demonstração</a></li>
+          <li><a href="#newsletter">Novidades por email</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Informação</h3>
+        <ul>
+          <li><a href="perfil.html">Perfil</a></li>
+          <li><a href="encomendar.html">Encomendar</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Contacto</h3>
+        <ul>
+          <li><a href="#contactos" data-target="contactos">Contacte-nos</a></li>
+          <li><a href="mailto:contacto@tero.pt">contacto@tero.pt</a></li>
+          <li><a href="tel:+351932102709">+351 932 102 709</a></li>
+          <li>Aveiro e Ílhavo</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="privacidade.html">Privacidade e cookies</a></li>
+          <li><a href="termos.html">Termos e condições</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="section newsletter" id="newsletter">
+      <div class="container newsletter-card">
+        <h2>Novidades TERO</h2>
+        <p>A subscrição é gerida pela Brevo. O formulário externo só é carregado após a sua autorização.</p>
+        <label class="newsletter-consent" for="newsletterConsent">
+          <input id="newsletterConsent" type="checkbox" aria-controls="newsletterEmbed" aria-describedby="newsletterPrivacyNotice newsletterFeedback" />
+          <span>Autorizo o carregamento do formulário da Brevo e compreendo que, ao submeter o meu email nesse formulário, peço para receber novidades da TERO. Posso cancelar através da ligação incluída nos emails.</span>
+        </label>
+        <p id="newsletterPrivacyNotice" class="newsletter-privacy">O endereço será enviado à Brevo para gerir a subscrição. Consulte a <a href="privacidade.html#newsletter">informação de privacidade</a>.</p>
+        <div class="newsletter-actions">
+          <button type="button" class="btn btn-primary" id="loadNewsletterForm" disabled>Carregar formulário de inscrição</button>
+        </div>
+        <p id="newsletterFeedback" class="form-feedback" role="status" aria-live="polite"></p>
+        <div id="newsletterEmbed" class="newsletter-embed" hidden>
+          <iframe
+            id="newsletterFrame"
+            title="Formulário de inscrição TERO alojado pela Brevo"
+            width="540"
+            height="305"
+            data-src="https://d743b961.sibforms.com/v2/serve/MUIFAOo1XnS1ourVII54LlXlgmkJBFIUhP3HdDX_GN6kZJwQK5T1yT9V5qLhWhNw3VVllmMuDmGGHEY6zCnAGEhBo2_6dLzopVEPlxdV2P_xTCdKI4p12Vbh0vYGHSsQRNYqhHezn4LR8p-Ku9GBl8_TaSMj4nHXuy1JJV3L1g7dAht60uw-_Sp_PZTDO-h3DVp1BOZCVMQda_B-5w=="
+            loading="lazy"
+          ></iframe>
+        </div>
+        <noscript>Ative JavaScript para autorizar e carregar o formulário da Brevo.</noscript>
+      </div>
+    </section>
+
+    <div class="container footer-bottom">
+      <p>Instagram: perfil oficial por criar. © <span id="year"></span> TERO.</p>
+    </div>
+  </footer>
+
+  <div class="modal" id="authModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-panel">
+      <button class="modal-close" id="closeModal" aria-label="Fechar janela" type="button">×</button>
+      <h2 id="authTitle">Entrar na TERO</h2>
+      <p class="modal-note">Autenticação demonstrativa: não é criada uma conta real nem são enviados dados para um servidor.</p>
+
+      <div class="auth-switch" role="tablist" aria-label="Escolha de autenticação">
+        <button id="loginTab" type="button" class="tab-btn active" role="tab" aria-selected="true">Login</button>
+        <button id="registerTab" type="button" class="tab-btn" role="tab" aria-selected="false">Registo</button>
+      </div>
+
+      <form id="loginForm" class="auth-form" autocomplete="on">
+        <label for="loginEmail">Email</label>
+        <input id="loginEmail" type="email" required autocomplete="email" />
+        <label for="loginPassword">Palavra-passe</label>
+        <input id="loginPassword" type="password" required autocomplete="current-password" />
+        <button type="submit" class="btn btn-primary">Entrar</button>
+      </form>
+
+      <form id="registerForm" class="auth-form hidden" autocomplete="on">
+        <label for="registerName">Nome</label>
+        <input id="registerName" type="text" required autocomplete="name" />
+        <label for="registerEmail">Email</label>
+        <input id="registerEmail" type="email" required autocomplete="email" />
+        <label for="registerPassword">Palavra-passe</label>
+        <input id="registerPassword" type="password" required autocomplete="new-password" />
+        <button type="submit" class="btn btn-primary">Criar conta</button>
+      </form>
+
+      <p id="authFeedback" class="form-feedback" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

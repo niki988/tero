@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo | TERO</title>
+  <meta name="description" content="Consulte exemplos provisórios de refeições preparadas e caixas TERO para entrega em Aveiro e Ílhavo." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="catalogue-page">
+  <a class="skip-link" href="#catalogoConteudo">Saltar para o catálogo</a>
+
+  <header class="site-header" id="topo">
+    <div class="container header-grid">
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="header-center catalogue-brand">
+        <a class="brand-link" href="index.html" aria-label="TERO - Página inicial">TERO</a>
+        <a class="btn btn-primary" href="encomendar.html">Encomendar</a>
+      </div>
+
+      <div class="header-right" id="authControls" aria-live="polite">
+        <button class="text-link" id="loginBtn" type="button">Login</button>
+        <button class="btn btn-outline" id="registerBtn" type="button">Registar</button>
+      </div>
+    </div>
+
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Navegação móvel">
+      <ul>
+        <li><a href="perfil.html">Perfil</a></li>
+        <li><a href="encomendar.html">Encomendar</a></li>
+        <li><a class="active" href="catalogo.html" aria-current="page">Catálogo</a></li>
+        <li><a href="#contactos">Contacte-nos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="catalogoConteudo" class="catalogue-main">
+    <div class="container">
+      <div class="catalogue-heading">
+        <div>
+          <p class="catalogue-kicker">TERO</p>
+          <h1>O nosso catálogo</h1>
+          <p class="catalogue-subtitle">Exemplos provisórios de refeições individuais e caixas.</p>
+        </div>
+      </div>
+      <p class="provisional-note">Os exemplos usam as faixas do briefing: 9 €–14 € por refeição individual e 42 €–68 € por caixa. Os pratos, ícones, ingredientes, alergénios, disponibilidade e preços finais ainda têm de ser confirmados.</p>
+
+      <nav class="category-navigation" id="categoryNavigation" aria-label="Categorias do catálogo">
+        <button type="button" class="category-button active" data-category="Todos" aria-pressed="true">Todos</button>
+        <button type="button" class="category-button" data-category="Refeições individuais" aria-pressed="false">Refeições individuais</button>
+        <button type="button" class="category-button" data-category="Caixas de refeições" aria-pressed="false">Caixas de refeições</button>
+      </nav>
+
+      <section class="catalogue-grid" id="catalogueGrid" aria-live="polite" aria-label="Produtos disponíveis"></section>
+    </div>
+  </main>
+
+  <footer class="site-footer catalogue-footer" id="contactos">
+    <div class="container footer-grid">
+      <section>
+        <h3>Sobre a TERO</h3>
+        <ul>
+          <li><a href="index.html">Página inicial</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3>Informação</h3>
+        <ul>
+          <li><a href="perfil.html">Perfil</a></li>
+          <li><a href="encomendar.html">Encomendar</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3>Contacto</h3>
+        <ul>
+          <li><a href="mailto:contacto@tero.pt">contacto@tero.pt</a></li>
+          <li><a href="tel:+351932102709">+351 932 102 709</a></li>
+          <li>Aveiro e Ílhavo</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="privacidade.html">Privacidade e cookies</a></li>
+          <li><a href="termos.html">Termos e condições</a></li>
+        </ul>
+      </section>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> TERO. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <div class="modal" id="authModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-panel">
+      <button class="modal-close" id="closeModal" aria-label="Fechar janela" type="button">×</button>
+      <h2 id="authTitle">Entrar na TERO</h2>
+      <p class="modal-note">Autenticação demonstrativa: não é criada uma conta real nem são enviados dados para um servidor.</p>
+      <div class="auth-switch" role="tablist" aria-label="Escolha de autenticação">
+        <button id="loginTab" type="button" class="tab-btn active" role="tab" aria-selected="true">Login</button>
+        <button id="registerTab" type="button" class="tab-btn" role="tab" aria-selected="false">Registo</button>
+      </div>
+      <form id="loginForm" class="auth-form" autocomplete="on">
+        <label for="loginEmail">Email</label>
+        <input id="loginEmail" type="email" required autocomplete="email" />
+        <label for="loginPassword">Palavra-passe</label>
+        <input id="loginPassword" type="password" required autocomplete="current-password" />
+        <button type="submit" class="btn btn-primary">Entrar</button>
+      </form>
+      <form id="registerForm" class="auth-form hidden" autocomplete="on">
+        <label for="registerName">Nome</label>
+        <input id="registerName" type="text" required autocomplete="name" />
+        <label for="registerEmail">Email</label>
+        <input id="registerEmail" type="email" required autocomplete="email" />
+        <label for="registerPassword">Palavra-passe</label>
+        <input id="registerPassword" type="password" required autocomplete="new-password" />
+        <button type="submit" class="btn btn-primary">Criar conta</button>
+      </form>
+      <p id="authFeedback" class="form-feedback" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/script.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/catalogo.js"></script>
+</body>
+</html>

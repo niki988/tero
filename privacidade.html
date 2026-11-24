@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacidade e cookies | TERO</title>
+  <meta name="description" content="Informação provisória sobre privacidade, armazenamento local, cookies e formulário Brevo no protótipo TERO." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="information-page">
+  <a class="skip-link" href="#privacyContent">Saltar para a informação de privacidade</a>
+
+  <header class="site-header">
+    <div class="container header-grid">
+      <div class="header-center catalogue-brand">
+        <a class="brand-link" href="index.html" aria-label="TERO - Página inicial">TERO</a>
+        <a class="btn btn-primary" href="catalogo.html">Menu de demonstração</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="privacyContent" class="legal-main">
+    <article class="container legal-card">
+      <h1>Privacidade e cookies</h1>
+      <p class="legal-notice"><strong>Documento provisório:</strong> este site é um protótipo académico e não processa encomendas reais. O formulário de novidades usa um serviço externo, carregado apenas após autorização, e pode recolher dados quando o utilizador conclui a inscrição. Esta informação deve ser revista antes de qualquer publicação comercial.</p>
+
+      <section>
+        <h2>Dados usados nesta demonstração</h2>
+        <p>O carrinho, os dados de entrega introduzidos no checkout de demonstração e os dados de perfil de teste podem ser guardados no armazenamento local do navegador (localStorage). Não são enviados para um servidor da TERO pela aplicação. Evite introduzir dados reais ou sensíveis.</p>
+        <p>O formulário de novidades é fornecido pela Brevo. Só é carregado depois de o utilizador autorizar; se o utilizador submeter o endereço no formulário, este é enviado à Brevo para gerir a subscrição. A TERO deve confirmar as definições da lista, o processo de confirmação e as condições aplicáveis ao serviço.</p>
+      </section>
+
+      <section>
+        <h2>Finalidade e eliminação</h2>
+        <p>O armazenamento local serve apenas para demonstrar o carrinho, o perfil e o percurso de checkout. Os dados permanecem neste navegador até serem apagados pelo utilizador ou removidos através do botão abaixo. Limpar os dados locais também termina a sessão demonstrativa e esvazia o carrinho.</p>
+        <div class="privacy-actions">
+          <button type="button" class="btn btn-outline" id="clearLocalData">Apagar dados deste navegador</button>
+          <p id="privacyFeedback" class="form-feedback" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section id="cookies">
+        <h2>Cookies e tecnologias semelhantes</h2>
+        <p>O protótipo não configura cookies de publicidade nem ferramentas de análise. Usa localStorage para as funcionalidades demonstrativas; localStorage não é um cookie. O formulário da Brevo não é carregado antes da autorização apresentada na página inicial.</p>
+        <p>Ao carregar o formulário, o navegador comunica com a Brevo; esse serviço pode receber dados técnicos da ligação. Consulte a <a href="https://www.brevo.com/legal/privacypolicy/" target="_blank" rel="noopener noreferrer">política de privacidade da Brevo</a>. As páginas também carregam tipos de letra a partir do Google Fonts. Antes da publicação, a TERO deve rever os fornecedores externos, as respetivas condições, a informação de privacidade e qualquer transferência de dados associada. Se forem adicionadas ferramentas de análise ou publicidade, será necessário configurar a informação e o consentimento aplicáveis antes de as ativar.</p>
+      </section>
+
+      <section id="newsletter">
+        <h2>Novidades por email</h2>
+        <p>O endereço só é enviado à Brevo quando o utilizador submete o formulário externo. O envio é uma solicitação de subscrição de novidades da TERO. A autorização para carregar o formulário não é guardada pela aplicação do site. Antes do lançamento, confirmar na Brevo a lista de destino, eventual confirmação dupla (double opt-in), o mecanismo de cancelamento, os prazos de conservação e os registos de consentimento.</p>
+      </section>
+
+      <section>
+        <h2>Contactos e versão final</h2>
+        <p>O responsável legal pelo tratamento, os prazos de conservação e os meios para exercer direitos terão de ser identificados pela entidade que operar a TERO, incluindo o contacto para pedidos de privacidade. Esta página não substitui uma política de privacidade final nem uma revisão jurídica.</p>
+      </section>
+
+      <p><a href="index.html">Voltar à página inicial</a></p>
+    </article>
+  </main>
+
+  <footer class="site-footer checkout-footer">
+    <div class="container footer-bottom">
+      <nav aria-label="Informação legal">
+        <a href="termos.html">Termos e condições</a>
+        <a href="catalogo.html">Menu de demonstração</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/privacidade.js"></script>
+</body>
+</html>

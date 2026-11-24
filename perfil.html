@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>O meu perfil | TERO</title>
+  <meta name="description" content="Demonstração de uma área pessoal TERO; não cria uma conta real." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="profile-page">
+  <a class="skip-link" href="#perfilConteudo">Saltar para o perfil</a>
+
+  <header class="site-header" id="topo">
+    <div class="container header-grid">
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="header-center catalogue-brand">
+        <a class="brand-link" href="index.html" aria-label="TERO - Página inicial">TERO</a>
+        <a class="btn btn-primary" href="encomendar.html">Encomendar</a>
+      </div>
+
+      <div class="header-right" id="authControls" aria-live="polite"></div>
+    </div>
+
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Navegação móvel">
+      <ul>
+        <li><a class="active" href="perfil.html" aria-current="page">Perfil</a></li>
+        <li><a href="encomendar.html">Encomendar</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="index.html#contactos">Contacte-nos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="perfilConteudo" class="profile-main">
+    <div class="container profile-container">
+      <h1>O meu perfil</h1>
+      <p class="provisional-note">Perfil demonstrativo: os dados introduzidos ficam apenas neste navegador e não criam uma conta real.</p>
+
+      <section class="profile-summary" aria-labelledby="profileName">
+        <div class="profile-avatar" id="profileAvatar" aria-hidden="true">TP</div>
+        <div class="profile-summary-info">
+          <h2 id="profileName">Nome do utilizador</h2>
+          <p id="profileEmail">email@exemplo.pt</p>
+          <span class="account-status" id="accountStatus">Sessão não iniciada</span>
+        </div>
+        <button type="button" class="btn btn-outline" id="editProfileTop">Editar perfil</button>
+      </section>
+
+      <div class="profile-grid">
+        <section class="profile-card" aria-labelledby="personalTitle">
+          <div class="profile-card-heading">
+            <h2 id="personalTitle">Informações pessoais</h2>
+            <button type="button" class="text-action" id="editPersonal">Editar informações</button>
+          </div>
+
+          <div id="personalView" class="information-list">
+            <dl>
+              <div><dt>Nome completo</dt><dd id="personalName">Nome do utilizador</dd></div>
+              <div><dt>Email</dt><dd id="personalEmail">email@exemplo.pt</dd></div>
+              <div><dt>Número de telemóvel</dt><dd id="personalPhone">Não indicado</dd></div>
+              <div><dt>Password</dt><dd>••••••••</dd></div>
+            </dl>
+          </div>
+
+          <form id="personalForm" class="profile-form hidden" novalidate>
+            <label for="fullName">Nome completo</label>
+            <input id="fullName" name="fullName" type="text" autocomplete="name" required minlength="2" />
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+            <label for="phone">Número de telemóvel</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+351" />
+            <p class="field-error" id="personalError" role="alert"></p>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Guardar alterações</button>
+              <button type="button" class="btn btn-outline" id="cancelPersonal">Cancelar</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="profile-card" aria-labelledby="addressTitle">
+          <div class="profile-card-heading">
+            <h2 id="addressTitle">Morada de entrega</h2>
+            <button type="button" class="text-action" id="editAddress">Editar morada</button>
+          </div>
+
+          <div id="addressView" class="address-view">
+            <p class="empty-message" id="addressEmpty">Ainda não adicionou uma morada de entrega.</p>
+            <dl id="addressDetails" class="hidden">
+              <div><dt>Nome do destinatário</dt><dd id="addressName"></dd></div>
+              <div><dt>Morada</dt><dd id="addressStreet"></dd></div>
+              <div><dt>Código postal</dt><dd id="addressPostal"></dd></div>
+              <div><dt>Localidade</dt><dd id="addressCity"></dd></div>
+              <div><dt>Número de telemóvel</dt><dd id="addressPhone"></dd></div>
+            </dl>
+          </div>
+
+          <form id="addressForm" class="profile-form hidden" novalidate>
+            <label for="recipientName">Nome do destinatário</label>
+            <input id="recipientName" type="text" autocomplete="shipping name" required />
+            <label for="street">Morada</label>
+            <input id="street" type="text" autocomplete="shipping street-address" required />
+            <label for="postalCode">Código postal</label>
+            <input id="postalCode" type="text" autocomplete="shipping postal-code" required pattern="[0-9]{4}-[0-9]{3}" placeholder="0000-000" />
+            <label for="city">Localidade</label>
+            <input id="city" type="text" autocomplete="shipping address-level2" required />
+            <label for="addressTelephone">Número de telemóvel</label>
+            <input id="addressTelephone" type="tel" autocomplete="shipping tel" required />
+            <p class="field-error" id="addressError" role="alert"></p>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Guardar morada</button>
+              <button type="button" class="btn btn-outline" id="cancelAddress">Cancelar</button>
+            </div>
+          </form>
+        </section>
+      </div>
+
+      <section class="profile-card orders-section" aria-labelledby="ordersTitle">
+        <div class="profile-card-heading">
+          <h2 id="ordersTitle">As minhas encomendas</h2>
+        </div>
+        <div id="ordersView" class="orders-view">
+          <div class="empty-orders">
+            <p>O histórico de encomendas reais não está disponível nesta demonstração.</p>
+            <a class="btn btn-primary" href="encomendar.html">Encomendar agora</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="account-actions" aria-labelledby="accountTitle">
+        <h2 id="accountTitle">Definições da conta</h2>
+        <div class="account-action-list">
+          <button type="button" id="changePassword">Alterar password</button>
+          <button type="button" id="logoutAccount">Terminar sessão</button>
+          <button type="button" class="danger-action" id="deleteAccount">Eliminar conta</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer profile-footer">
+    <div class="container footer-grid">
+      <section>
+        <h3>Sobre a TERO</h3>
+        <ul>
+          <li><a href="index.html">Página inicial</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3>Informação</h3>
+        <ul>
+          <li><a href="perfil.html">Perfil</a></li>
+          <li><a href="encomendar.html">Encomendar</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3>Contacto</h3>
+        <ul>
+          <li><a href="mailto:contacto@tero.pt">contacto@tero.pt</a></li>
+          <li><a href="tel:+351932102709">+351 932 102 709</a></li>
+          <li>Aveiro e Ílhavo</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="privacidade.html">Privacidade e cookies</a></li>
+          <li><a href="termos.html">Termos e condições</a></li>
+        </ul>
+      </section>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> TERO. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <div class="modal" id="authModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-panel">
+      <button class="modal-close" id="closeModal" aria-label="Fechar janela" type="button">×</button>
+      <h2 id="authTitle">Entrar na TERO</h2>
+      <p class="modal-note">Autenticação demonstrativa: não é criada uma conta real nem são enviados dados para um servidor.</p>
+      <div class="auth-switch" role="tablist" aria-label="Escolha de autenticação">
+        <button id="loginTab" type="button" class="tab-btn active" role="tab" aria-selected="true">Login</button>
+        <button id="registerTab" type="button" class="tab-btn" role="tab" aria-selected="false">Registo</button>
+      </div>
+      <form id="loginForm" class="auth-form" autocomplete="on">
+        <label for="loginEmail">Email</label>
+        <input id="loginEmail" type="email" required autocomplete="email" />
+        <label for="loginPassword">Palavra-passe</label>
+        <input id="loginPassword" type="password" required autocomplete="current-password" />
+        <button type="submit" class="btn btn-primary">Entrar</button>
+      </form>
+      <form id="registerForm" class="auth-form hidden" autocomplete="on">
+        <label for="registerName">Nome</label>
+        <input id="registerName" type="text" required autocomplete="name" />
+        <label for="registerEmail">Email</label>
+        <input id="registerEmail" type="email" required autocomplete="email" />
+        <label for="registerPassword">Palavra-passe</label>
+        <input id="registerPassword" type="password" required autocomplete="new-password" />
+        <button type="submit" class="btn btn-primary">Criar conta</button>
+      </form>
+      <p id="authFeedback" class="form-feedback" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <div class="profile-toast" id="profileToast" role="status" aria-live="polite"></div>
+
+  <script src="js/script.js"></script>
+  <script src="js/perfil.js"></script>
+</body>
+</html>

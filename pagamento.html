@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pagamento | TERO</title>
+  <meta name="description" content="Etapa demonstrativa de pagamento TERO; nenhum pagamento é processado." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="checkout-page payment-page">
+  <a class="skip-link" href="#checkoutContent">Saltar para o pagamento</a>
+
+  <header class="site-header" id="topo">
+    <div class="container header-grid">
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="header-center catalogue-brand">
+        <a class="brand-link" href="index.html" aria-label="TERO - Página inicial">TERO</a>
+        <a class="btn btn-primary" href="encomendar.html">Encomendar</a>
+      </div>
+
+      <div class="header-right" id="authControls" aria-live="polite">
+        <button class="text-link" id="loginBtn" type="button">Login</button>
+        <button class="btn btn-outline" id="registerBtn" type="button">Registar</button>
+      </div>
+    </div>
+
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Navegação móvel">
+      <ul>
+        <li><a href="perfil.html">Perfil</a></li>
+        <li><a href="encomendar.html">Encomendar</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="index.html#contactos">Contacte-nos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="checkoutContent" class="checkout-main payment-main">
+    <div class="container checkout-container">
+      <ol class="order-progress" aria-label="Progresso da encomenda">
+        <li class="completed" data-checkout-step="0">
+          <span>1</span>
+          <strong>Carrinho</strong>
+        </li>
+        <li class="completed" data-checkout-step="1">
+          <span>2</span>
+          <strong>Localização</strong>
+        </li>
+        <li class="active" data-checkout-step="2" aria-current="step">
+          <span>3</span>
+          <strong>Pagamento</strong>
+        </li>
+        <li data-checkout-step="3">
+          <span>4</span>
+          <strong>Detalhes da encomenda</strong>
+        </li>
+      </ol>
+
+      <div class="checkout-heading">
+        <h1>Pagamento</h1>
+        <p>Esta etapa é demonstrativa. Nenhum método de pagamento está integrado.</p>
+      </div>
+
+      <div class="payment-layout">
+        <div class="payment-main-column">
+          <section class="checkout-card order-summary-card" aria-labelledby="orderSummaryTitle">
+            <h2 id="orderSummaryTitle">Resumo da encomenda</h2>
+            <div id="paymentCartItems" class="payment-cart-items"></div>
+            <div class="payment-totals">
+              <div><span>Subtotal</span><strong id="subtotalTotal">0,00 €</strong></div>
+              <div class="payment-final-total"><span>Total</span><strong id="paymentTotal">0,00 €</strong></div>
+            </div>
+            <p class="form-hint">O custo de entrega ainda não está definido e não está incluído no total demonstrativo.</p>
+          </section>
+
+          <section class="checkout-card payment-method-card" aria-labelledby="paymentMethodTitle">
+            <h2 id="paymentMethodTitle">Método de pagamento</h2>
+            <p class="payment-method-note">Os métodos apresentados são opções propostas até serem confirmados pela TERO.</p>
+
+            <form id="paymentForm" novalidate>
+              <div class="payment-options">
+                <label class="payment-option">
+                  <input type="radio" name="paymentMethod" value="multibanco" />
+                  <span class="payment-option-content">
+                    <strong>Referência Multibanco</strong>
+                    <small>Pagamento através de entidade e referência.</small>
+                  </span>
+                  <span class="payment-placeholder" aria-hidden="true">MB</span>
+                </label>
+
+                <label class="payment-option">
+                  <input type="radio" name="paymentMethod" value="mbway" />
+                  <span class="payment-option-content">
+                    <strong>MB WAY</strong>
+                    <small>Pagamento através da aplicação MB WAY.</small>
+                  </span>
+                  <span class="payment-placeholder mbway-placeholder" aria-hidden="true">MB WAY</span>
+                </label>
+
+                <div class="mbway-fields hidden" id="mbwayFields">
+                  <label>
+                    Telemóvel associado ao MB WAY
+                    <input id="mbwayPhone" type="tel" autocomplete="tel" />
+                  </label>
+                </div>
+
+                <label class="payment-option">
+                  <input type="radio" name="paymentMethod" value="card" />
+                  <span class="payment-option-content">
+                    <strong>Cartão de crédito ou débito</strong>
+                    <small>Pagamento seguro será tratado por um fornecedor externo.</small>
+                  </span>
+                  <span class="payment-placeholder" aria-hidden="true">VISA · MC</span>
+                </label>
+
+                <label class="payment-option">
+                  <input type="radio" name="paymentMethod" value="delivery" />
+                  <span class="payment-option-content">
+                    <strong>Pagamento no momento da entrega</strong>
+                    <small>Pague quando receber a sua encomenda.</small>
+                  </span>
+                  <span class="payment-placeholder" aria-hidden="true">€</span>
+                </label>
+              </div>
+
+              <p class="form-error" id="paymentError" role="alert"></p>
+
+              <label class="terms-checkbox">
+                <input id="acceptTerms" type="checkbox" required />
+                Li os <a href="termos.html">termos e condições</a> e a <a href="privacidade.html">informação de privacidade</a> desta demonstração.
+              </label>
+            </form>
+          </section>
+        </div>
+
+        <aside class="payment-sidebar">
+          <section class="checkout-card delivery-summary-card" aria-labelledby="deliverySummaryTitle">
+            <div class="payment-card-heading">
+              <h2 id="deliverySummaryTitle">Dados de entrega</h2>
+              <a href="localizacao.html">Alterar localização</a>
+            </div>
+            <dl id="deliverySummary" class="delivery-summary"></dl>
+          </section>
+        </aside>
+      </div>
+
+      <div class="checkout-actions payment-actions">
+        <a class="btn btn-outline" href="localizacao.html">Voltar à localização</a>
+        <div class="payment-action-total">
+          <span>Total</span>
+          <strong id="paymentActionTotal">0,00 €</strong>
+        </div>
+        <button type="button" class="btn btn-primary" id="confirmPayment">Concluir simulação</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer checkout-footer">
+    <div class="container footer-grid">
+      <section>
+        <h3>Sobre a TERO</h3>
+        <ul>
+          <li><a href="index.html">Página inicial</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3>Informação</h3>
+        <ul>
+          <li><a href="perfil.html">Perfil</a></li>
+          <li><a href="encomendar.html">Encomendar</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3>Contacto</h3>
+        <ul>
+          <li><a href="index.html#contactos">Contacte-nos</a></li>
+          <li><a href="mailto:contacto@tero.pt">contacto@tero.pt</a></li>
+          <li><a href="tel:+351932102709">+351 932 102 709</a></li>
+          <li>Aveiro e Ílhavo</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="privacidade.html">Privacidade e cookies</a></li>
+          <li><a href="termos.html">Termos e condições</a></li>
+        </ul>
+      </section>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> TERO. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <div class="modal" id="authModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-panel">
+      <button class="modal-close" id="closeModal" aria-label="Fechar janela" type="button">×</button>
+      <h2 id="authTitle">Entrar na TERO</h2>
+      <p class="modal-note">Autenticação demonstrativa: não é criada uma conta real nem são enviados dados para um servidor.</p>
+      <div class="auth-switch" role="tablist" aria-label="Escolha de autenticação">
+        <button id="loginTab" type="button" class="tab-btn active" role="tab" aria-selected="true">Login</button>
+        <button id="registerTab" type="button" class="tab-btn" role="tab" aria-selected="false">Registo</button>
+      </div>
+      <form id="loginForm" class="auth-form" autocomplete="on">
+        <label for="loginEmail">Email</label>
+        <input id="loginEmail" type="email" required autocomplete="email" />
+        <label for="loginPassword">Palavra-passe</label>
+        <input id="loginPassword" type="password" required autocomplete="current-password" />
+        <button type="submit" class="btn btn-primary">Entrar</button>
+      </form>
+      <form id="registerForm" class="auth-form hidden" autocomplete="on">
+        <label for="registerName">Nome</label>
+        <input id="registerName" type="text" required autocomplete="name" />
+        <label for="registerEmail">Email</label>
+        <input id="registerEmail" type="email" required autocomplete="email" />
+        <label for="registerPassword">Palavra-passe</label>
+        <input id="registerPassword" type="password" required autocomplete="new-password" />
+        <button type="submit" class="btn btn-primary">Criar conta</button>
+      </form>
+      <p id="authFeedback" class="form-feedback" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/pagamento.js"></script>
+</body>
+</html>

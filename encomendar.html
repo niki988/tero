@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Encomendar | TERO</title>
+  <meta name="description" content="Escolha refeições individuais ou caixas de refeições TERO. Exemplo de encomenda para Aveiro e Ílhavo." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="catalogue-page">
+  <a class="skip-link" href="#encomendaConteudo">Saltar para a encomenda</a>
+  <header class="site-header" id="topo">
+    <div class="container header-grid">
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="header-center catalogue-brand">
+        <a class="brand-link" href="index.html" aria-label="TERO - Página inicial">TERO</a>
+        <a class="btn btn-primary" href="encomendar.html">Encomendar</a>
+      </div>
+      <div class="header-right" id="authControls" aria-live="polite"></div>
+    </div>
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Navegação móvel">
+      <ul>
+        <li><a href="perfil.html">Perfil</a></li>
+        <li><a class="active" href="encomendar.html" aria-current="page">Encomendar</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="index.html#contactos">Contacte-nos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="encomendaConteudo" class="catalogue-main">
+    <div class="container">
+      <div class="catalogue-heading">
+        <div>
+          <p class="catalogue-kicker">Encomenda</p>
+          <h1>Escolha os seus produtos</h1>
+          <p>O cliente poderá escolher refeições avulsas ou caixas com várias unidades.</p>
+        </div>
+      </div>
+      <p class="provisional-note">Os exemplos usam as faixas do briefing: 9 €–14 € por refeição individual e 42 €–68 € por caixa. Produtos e disponibilidade são provisórios; esta demonstração não aceita encomendas reais.</p>
+      <nav class="category-navigation" id="categoryNavigation" aria-label="Filtrar produtos">
+        <button type="button" class="category-button active" data-category="Todos" aria-pressed="true">Todos</button>
+        <button type="button" class="category-button" data-category="Refeições individuais" aria-pressed="false">Refeições individuais</button>
+        <button type="button" class="category-button" data-category="Caixas de refeições" aria-pressed="false">Caixas de refeições</button>
+      </nav>
+      <section class="catalogue-grid" id="catalogueGrid" aria-label="Produtos disponíveis"></section>
+    </div>
+  </main>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="Resumo da encomenda">
+    <div class="cart-drawer-header"><h2>Carrinho</h2><button type="button" id="closeCart" aria-label="Fechar carrinho">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-drawer-footer"><strong>Total: <span id="cartDrawerTotal">0,00 €</span></strong><button type="button" class="btn btn-primary" id="drawerCheckout">Encomendar</button></div>
+  </aside>
+  <div class="cart-backdrop" id="cartBackdrop" hidden></div>
+
+  <section class="ordering-bar" aria-label="Resumo da encomenda">
+    <div class="container ordering-bar-grid">
+      <div class="order-total"><span>Total</span><strong id="orderTotal">0,00 €</strong></div>
+      <div class="ordering-actions">
+        <button type="button" class="btn btn-primary" id="checkoutButton">Encomendar</button>
+        <button type="button" class="btn cart-button" id="openCart">Carrinho <span class="cart-badge" id="cartBadge">0</span></button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer catalogue-footer">
+    <div class="container footer-bottom">
+      <nav aria-label="Informação legal">
+        <a href="privacidade.html">Privacidade e cookies</a>
+        <a href="termos.html">Termos e condições</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div class="modal" id="authModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-panel">
+      <button class="modal-close" id="closeModal" aria-label="Fechar janela" type="button">×</button>
+      <h2 id="authTitle">Entrar na TERO</h2>
+      <p class="modal-note">Autenticação demonstrativa: não é criada uma conta real nem são enviados dados para um servidor.</p>
+      <div class="auth-switch" role="tablist" aria-label="Escolha de autenticação">
+        <button id="loginTab" type="button" class="tab-btn active" role="tab" aria-selected="true">Login</button>
+        <button id="registerTab" type="button" class="tab-btn" role="tab" aria-selected="false">Registo</button>
+      </div>
+      <form id="loginForm" class="auth-form" autocomplete="on">
+        <label for="loginEmail">Email</label><input id="loginEmail" type="email" required autocomplete="email">
+        <label for="loginPassword">Palavra-passe</label><input id="loginPassword" type="password" required autocomplete="current-password">
+        <button type="submit" class="btn btn-primary">Entrar</button>
+      </form>
+      <form id="registerForm" class="auth-form hidden" autocomplete="on">
+        <label for="registerName">Nome</label><input id="registerName" type="text" required autocomplete="name">
+        <label for="registerEmail">Email</label><input id="registerEmail" type="email" required autocomplete="email">
+        <label for="registerPassword">Palavra-passe</label><input id="registerPassword" type="password" required autocomplete="new-password">
+        <button type="submit" class="btn btn-primary">Criar conta</button>
+      </form>
+      <p id="authFeedback" class="form-feedback" role="status"></p>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/script.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/encomendar.js"></script>
+</body>
+</html>

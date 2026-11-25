@@ -1,10 +1,10 @@
 :root {
-  --bg: #ffffff;
-  --surface: #b00020;
-  --surface-strong: #780016;
+  --bg: #e9dfc9;
+  --surface: #52664d;
+  --surface-strong: #52664d;
   --text: #111111;
-  --text-soft: #780016;
-  --border: #780016;
+  --text-soft: #52664d;
+  --border: #52664d;
   --shadow: none;
   --radius: 0;
   --radius-sm: 0;
@@ -27,7 +27,7 @@
   min-width: 18px;
   height: 18px;
   margin: 0.1rem 0 0;
-  accent-color: #b00020;
+  accent-color: #52664d;
 }
 
 .newsletter-privacy {
@@ -41,7 +41,7 @@
 .provisional-note {
   margin: 0 0 1.25rem;
   padding: 0.85rem 1rem;
-  border-left: 4px solid #b00020;
+  border-left: 4px solid #52664d;
   background: #f5f5f5;
   color: #444;
   font-size: 0.9rem;
@@ -98,7 +98,7 @@
 
 .legal-notice {
   padding: 0.85rem 1rem;
-  border-left: 4px solid #b00020;
+  border-left: 4px solid #52664d;
   background: #f5f5f5;
 }
 
@@ -136,7 +136,7 @@
 }
 
 .dish-info summary {
-  color: #780016;
+  color: #52664d;
   font-weight: 600;
   cursor: pointer;
 }
@@ -169,7 +169,7 @@ body {
   margin: 0;
   font-family: "Work Sans", "Segoe UI", sans-serif;
   color: var(--text);
-  background: #ffffff;
+  background: var(--bg);
   line-height: 1.5;
 }
 
@@ -219,7 +219,7 @@ svg {
   position: sticky;
   top: 0;
   z-index: 200;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(233, 223, 201, 0.95);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(8px);
 }
@@ -245,7 +245,7 @@ svg {
 }
 
 .footer-grid a:hover {
-  background: #b00020;
+  background: #52664d;
   color: #ffffff;
 }
 
@@ -268,9 +268,9 @@ svg {
   z-index: 300;
   width: 2.5rem;
   height: 2.5rem;
-  border: 1px solid #780016;
+  border: 1px solid #52664d;
   border-radius: 0;
-  background: #b00020;
+  background: #52664d;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -308,16 +308,16 @@ svg {
 }
 
 .btn-primary {
-  background: #b00020;
+  background: #52664d;
   color: #fff;
 }
 
 .btn-primary:hover {
-  background: #780016;
+  background: #52664d;
 }
 
 .btn-outline {
-  border-color: #780016;
+  border-color: #52664d;
   background: #fff;
   color: #111111;
 }
@@ -393,7 +393,7 @@ svg {
   text-align: center;
   color: #ffffff;
   background:
-    linear-gradient(145deg, #b00020, #780016),
+    linear-gradient(145deg, #52664d, #52664d),
     repeating-linear-gradient(
       45deg,
       rgba(255, 255, 255, 0.08),
@@ -504,15 +504,62 @@ svg {
 .auth-form input {
   flex: 1;
   min-width: 220px;
-  border: 1px solid #780016;
+  border: 1px solid #52664d;
   border-radius: 0;
   padding: 0.7rem 0.8rem;
   font: inherit;
 }
 
 .auth-form input:focus {
-  outline: 2px solid #b00020;
-  border-color: #780016;
+  outline: 2px solid #52664d;
+  border-color: #52664d;
+}
+
+.newsletter-consent {
+  margin: 1rem 0 0;
+  line-height: 1.5;
+}
+
+.newsletter-consent span {
+  flex: 1 1 auto;
+}
+
+.newsletter-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.newsletter-actions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.newsletter-embed {
+  max-width: 540px;
+  margin: 1.25rem auto 0;
+  background: #fff;
+}
+
+.newsletter-embed iframe {
+  display: block;
+  width: 100%;
+  max-width: 540px;
+  height: 305px;
+  margin: 0 auto;
+  border: 0;
+}
+
+.newsletter-embed[hidden] {
+  display: none;
+}
+
+.newsletter-privacy {
+  line-height: 1.5;
+}
+
+.newsletter-privacy a {
+  color: #fff;
 }
 
 .newsletter-consent {
@@ -570,7 +617,7 @@ svg {
 
 .site-footer {
   margin-top: 2rem;
-  background: #ffffff;
+  background: var(--bg);
   border-top: 1px solid var(--border);
 }
 
@@ -626,7 +673,7 @@ svg {
   width: 2rem;
   height: 2rem;
   border-radius: 0;
-  border: 1px solid #780016;
+  border: 1px solid #52664d;
   background: #fff;
   display: grid;
   place-items: center;
@@ -724,7 +771,7 @@ svg {
   width: 2.2rem;
   height: 2.2rem;
   border-radius: 0;
-  border: 1px solid #780016;
+  border: 1px solid #52664d;
   background: #fff;
   display: grid;
   place-items: center;
@@ -926,7 +973,7 @@ svg {
 }
 
 .mobile-menu a.active {
-  background: #b00020;
+  background: #52664d;
   color: #fff;
 }
 
@@ -945,7 +992,7 @@ svg {
 
 .catalogue-kicker {
   margin: 0;
-  color: #b00020;
+  color: #52664d;
   font-family: "Sora", "Segoe UI", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
@@ -1005,23 +1052,23 @@ svg {
 }
 
 .order-progress li.active {
-  color: #b00020;
+  color: #52664d;
 }
 
 .order-progress li.active span {
   color: #fff;
-  background: #b00020;
-  border-color: #b00020;
+  background: #52664d;
+  border-color: #52664d;
 }
 
 .order-progress li.completed span {
   color: #fff;
-  background: #780016;
-  border-color: #780016;
+  background: #52664d;
+  border-color: #52664d;
 }
 
 .order-progress li.completed {
-  color: #780016;
+  color: #52664d;
 }
 
 .order-progress li.disabled-step {
@@ -1116,7 +1163,7 @@ svg {
 .quantity-controls button {
   height: 44px;
   border: 0;
-  background: #b00020;
+  background: #52664d;
   color: #fff;
   font-size: 1.25rem;
   cursor: pointer;
@@ -1166,7 +1213,7 @@ svg {
   height: 1.7rem;
   display: grid;
   place-items: center;
-  background: #b00020;
+  background: #52664d;
   color: #fff;
   font-size: 0.75rem;
 }
@@ -1438,7 +1485,7 @@ svg {
   border-radius: 50%;
   display: grid;
   place-items: center;
-  background: #b00020;
+  background: #52664d;
   color: #fff;
   font-family: "Sora", "Segoe UI", sans-serif;
   font-size: 1.5rem;
@@ -1458,7 +1505,7 @@ svg {
 .account-status {
   display: inline-block;
   margin-top: 0.55rem;
-  color: #b00020;
+  color: #52664d;
   font-size: 0.78rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -1495,7 +1542,7 @@ svg {
 .text-action {
   border: 0;
   background: transparent;
-  color: #b00020;
+  color: #52664d;
   font: inherit;
   font-weight: 700;
   cursor: pointer;
@@ -1553,8 +1600,8 @@ svg {
 }
 
 .profile-form input:focus {
-  outline: 2px solid #b00020;
-  border-color: #780016;
+  outline: 2px solid #52664d;
+  border-color: #52664d;
 }
 
 .field-error {
@@ -1625,8 +1672,8 @@ svg {
 }
 
 .account-action-list .danger-action {
-  border-color: #b00020;
-  color: #b00020;
+  border-color: #52664d;
+  color: #52664d;
 }
 
 .profile-footer {
@@ -1780,8 +1827,8 @@ svg {
 .form-grid input:focus,
 .form-grid select:focus,
 .form-grid textarea:focus {
-  outline: 2px solid #b00020;
-  border-color: #780016;
+  outline: 2px solid #52664d;
+  border-color: #52664d;
 }
 
 .save-address {
@@ -1796,7 +1843,7 @@ svg {
 .save-address input {
   width: 18px;
   height: 18px;
-  accent-color: #b00020;
+  accent-color: #52664d;
 }
 
 .form-error {
@@ -1822,7 +1869,7 @@ svg {
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-items: center;
-  color: #780016;
+  color: #52664d;
   font-family: "Sora", "Segoe UI", sans-serif;
   font-weight: 700;
 }
@@ -1972,7 +2019,7 @@ svg {
 
 .payment-final-total strong {
   font-family: "Sora", "Segoe UI", sans-serif;
-  color: #b00020;
+  color: #52664d;
 }
 
 .payment-method-card {
@@ -2006,12 +2053,12 @@ svg {
 .payment-option input {
   width: 18px;
   height: 18px;
-  accent-color: #b00020;
+  accent-color: #52664d;
 }
 
 .payment-option.selected {
-  border: 2px solid #b00020;
-  background: #fff8f9;
+  border: 2px solid #52664d;
+  background: #e9dfc9;
   padding: 0.84rem;
 }
 
@@ -2038,7 +2085,7 @@ svg {
 }
 
 .mbway-placeholder {
-  color: #b00020;
+  color: #52664d;
 }
 
 .mbway-fields {
@@ -2074,7 +2121,7 @@ svg {
 .terms-checkbox input {
   width: 18px;
   height: 18px;
-  accent-color: #b00020;
+  accent-color: #52664d;
   margin-top: 0.1rem;
 }
 
@@ -2093,7 +2140,7 @@ svg {
 }
 
 .payment-card-heading a {
-  color: #b00020;
+  color: #52664d;
   font-size: 0.82rem;
   font-weight: 700;
   white-space: nowrap;
@@ -2253,10 +2300,10 @@ svg {
 .category-button {
   flex: 0 0 auto;
   min-height: 42px;
-  border: 1px solid #b00020;
+  border: 1px solid #52664d;
   border-radius: 999px;
   background: #fff;
-  color: #b00020;
+  color: #52664d;
   padding: 0.55rem 1rem;
   font: inherit;
   font-weight: 700;
@@ -2264,7 +2311,7 @@ svg {
 }
 
 .category-button.active {
-  background: #b00020;
+  background: #52664d;
   color: #fff;
 }
 
@@ -2311,7 +2358,7 @@ svg {
 
 .dish-category {
   margin: 0 0 0.25rem;
-  color: #b00020;
+  color: #52664d;
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
